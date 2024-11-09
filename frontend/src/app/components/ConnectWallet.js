@@ -41,6 +41,7 @@ export default function ConnectWallet({ userSession, userData, setUserData }) {
               width={50}
               height={50}
               src={profile}
+              alt="profile"
             />
           </div>
 

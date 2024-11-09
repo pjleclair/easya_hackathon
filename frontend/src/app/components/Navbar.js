@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="flex flex-col gap-4 p-4 text-black bg-slate-50 w-fit h-screen border-r-4">
       <div className="flex">
-        <Image src={logo} />
+        <Image src={logo} alt="logo" priority="true"/>
       </div>
       <div className="border h-px w-full"></div>
       <ul className="flex flex-col justify-center text-center gap-4">
