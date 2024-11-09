@@ -13,7 +13,7 @@ export default function Market() {
   const { markets } = useMarket();
 
   return (
-    <div className="flex-col">
+    <div className="flex-col pb-5">
       <h1 className="mt-8 text-4xl text-black text-center">BitBet</h1>
       <p className="mt-4 text-center">
         Decentralized prediction markets with sBTC.
