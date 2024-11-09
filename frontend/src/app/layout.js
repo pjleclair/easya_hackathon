@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen text-white bg-gradient-radial from-white via-pink-200 to-indigo-100 ">
+        <div className="h-full text-white bg-gradient-to-br from-[#5761b2] to-[#1fc5a8] ">
           {userData !== undefined ? (
             <UserContext.Provider value={{ userData, userSession }}>
               <MarketProvider>

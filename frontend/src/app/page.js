@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import {Tabs, Tab} from "@nextui-org/tabs";
+import { Tabs, Tab } from "@nextui-org/tabs";
 import { Divider } from "@nextui-org/react";
 import Swap from "./components/Swap";
 import { Line } from 'react-chartjs-2';
@@ -108,16 +108,10 @@ export default function Dashboard() {
           </div>
           <div className="flex gap-2">
             <Tabs>
-                <Tab key="portfolio" title="Portfolio">
-                  
-                </Tab>
-                <Tab key="assets" title="Assets">
-                  
-                </Tab>
-                <Tab key="history" title="History">
-                  
-                </Tab>
-              </Tabs>
+              <Tab key="portfolio" title="Portfolio"></Tab>
+              <Tab key="assets" title="Assets"></Tab>
+              <Tab key="history" title="History"></Tab>
+            </Tabs>
           </div>
         </div>
         <div className="w-full h-3/4 pl-4 pr-4">
@@ -135,7 +129,7 @@ export default function Dashboard() {
                 <CardBody>Here is some more info.</CardBody>
               </Card>
               <Card>
-              <CardHeader>
+                <CardHeader>
                   <Image />
                   Market Name
                 </CardHeader>
@@ -161,21 +155,13 @@ export default function Dashboard() {
                 <CardHeader className="flex justify-center">
                   Activity
                 </CardHeader>
-                <CardBody>
-                  Text
-                </CardBody>
+                <CardBody>Text</CardBody>
                 <Divider />
-                <CardBody>
-                  Text
-                </CardBody>
+                <CardBody>Text</CardBody>
                 <Divider />
-                <CardBody>
-                  Text
-                </CardBody>
+                <CardBody>Text</CardBody>
                 <Divider />
-                <CardBody>
-                  Text
-                </CardBody>
+                <CardBody>Text</CardBody>
               </Card>
             </div>
           </div>
@@ -185,5 +171,5 @@ export default function Dashboard() {
         <Swap />
       </div>
     </div>
-  )
+  );
 }
