@@ -1,24 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import ConnectWallet from "./ConnectWallet";
 
 import logo from "./assets/logo.svg";
 
 import Image from "next/image";
 
-export default function Navbar({ userSession, userData, setUserData }) {
+export default function Navbar() {
   return (
     <nav className="flex flex-col gap-4 p-4 text-black bg-slate-50 w-fit h-screen border-r-4">
-      {userData ? (
-        <ConnectWallet
-          userSession={userSession}
-          userData={userData}
-          setUserData={setUserData}
-        />
-      ) : (
-        ""
-      )}
       <div className="flex">
         <Image src={logo} />
       </div>

@@ -1,7 +1,12 @@
 import { showConnect } from "@stacks/connect";
-import { StacksMocknet, StacksTestnet } from "@stacks/network";
+import { StacksTestnet } from "@stacks/network";
+import React, { useState } from "react";
+import Image from "next/image";
+import profile from "./assets/profile.svg";
 
 export default function ConnectWallet({ userSession, userData, setUserData }) {
+  const [showDisconnect, setShowDisconnect] = useState(false);
+
   const connectWallet = () => {
     showConnect({
       userSession,
@@ -23,14 +28,37 @@ export default function ConnectWallet({ userSession, userData, setUserData }) {
     userSession.signUserOut(window.location.origin);
     setUserData({});
   };
+
   return (
-    <button
-      className="px-4 w-32 py-2 font-bold text-white transition duration-500 ease-in-out rounded bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-orange-500"
-      onClick={() => {
-        userData.profile ? disconnectWallet() : connectWallet();
-      }}
-    >
-      {userData.profile ? "Disconnect" : "Connect Wallet"}
-    </button>
+    <div className="m-5 flex-col bg-white rounded-lg shadow-md p-4 text-black gap-4">
+      {userData.profile ? (
+        <>
+          <div className="flex gap-4 items-center justify-center">
+            {"..." + userData.profile.stxAddress.testnet.slice(-5)}
+            <Image
+              onClick={() => setShowDisconnect(!showDisconnect)}
+              className="rounded-lg hover:cursor-pointer transition duration-500 ease-in-out"
+              width={50}
+              height={50}
+              src={profile}
+            />
+          </div>
+
+          <button
+            className={`px-4 py-2 mt-4 font-bold text-white transition duration-500 ease-in-out rounded bg-red-500 hover:bg-red-700 ${
+              !showDisconnect ? "hidden" : ""
+            }`}
+            onClick={disconnectWallet}>
+            Disconnect
+          </button>
+        </>
+      ) : (
+        <button
+          className="px-4 w-64 py-2 font-bold text-white transition duration-500 ease-in-out rounded bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-orange-500"
+          onClick={connectWallet}>
+          Connect Wallet
+        </button>
+      )}
+    </div>
   );
 }

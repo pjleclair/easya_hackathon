@@ -52,5 +52,221 @@
         "odds": 0.4
       }
     ]
+  },
+  {
+    "id": "11",
+    "name": "Will Bitcoin reach by the end of 2023?",
+    "category": "Cryptocurrency",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "$85,000",
+        "odds": 0.25
+      },
+      {
+        "id": "2",
+        "name": "$75,000",
+        "odds": 0.75
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Will the Democrats win the 2024 US Presidential Election?",
+    "category": "Politics",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.55
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.45
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "name": "Will SpaceX successfully launch Starship by the end of 2023?",
+    "category": "Space",
+    "status": "Closed",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.6
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.4
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "name": "Will Bitcoin reach by the end of 2023?",
+    "category": "Cryptocurrency",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "$85,000",
+        "odds": 0.25
+      },
+      {
+        "id": "2",
+        "name": "$75,000",
+        "odds": 0.75
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "name": "Will the Democrats win the 2024 US Presidential Election?",
+    "category": "Politics",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.55
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.45
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "name": "Will SpaceX successfully launch Starship by the end of 2023?",
+    "category": "Space",
+    "status": "Closed",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.6
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.4
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "name": "Will Bitcoin reach by the end of 2023?",
+    "category": "Cryptocurrency",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "$85,000",
+        "odds": 0.25
+      },
+      {
+        "id": "2",
+        "name": "$75,000",
+        "odds": 0.75
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "name": "Will the Democrats win the 2024 US Presidential Election?",
+    "category": "Politics",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.55
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.45
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "name": "Will SpaceX successfully launch Starship by the end of 2023?",
+    "category": "Space",
+    "status": "Closed",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.6
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.4
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "name": "Will Bitcoin reach by the end of 2023?",
+    "category": "Cryptocurrency",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "$85,000",
+        "odds": 0.25
+      },
+      {
+        "id": "2",
+        "name": "$75,000",
+        "odds": 0.75
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "name": "Will the Democrats win the 2024 US Presidential Election?",
+    "category": "Politics",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.55
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.45
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "name": "Will SpaceX successfully launch Starship by the end of 2023?",
+    "category": "Space",
+    "status": "Closed",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.6
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.4
+      }
+    ]
   }
 ]
