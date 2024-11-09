@@ -3,9 +3,10 @@
 import Image from "next/image";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import {Tabs, Tab} from "@nextui-org/tabs";
-import { Divider } from "@nextui-org/react";
+import { Divider, Select, SelectItem } from "@nextui-org/react";
 import Swap from "./components/Swap";
 import { Line } from 'react-chartjs-2';
+import { useState } from "react";
 
 import {
   Chart as ChartJS,
@@ -29,6 +30,8 @@ ChartJS.register(
 );
 
 export default function Dashboard() {
+  const [asset, setAsset] = useState("bUSD");
+
   const options = {
     responsive: true,
     plugins: {
@@ -37,7 +40,7 @@ export default function Dashboard() {
       },
       title: {
         display: true,
-        text: 'Bitcoin Price History',
+        text: `${asset} Price History`,
       },
     },
     scales: {
@@ -88,6 +91,10 @@ export default function Dashboard() {
     ],
   };
 
+  const handleSelection = (e) => {
+    setAsset(e.target.value);
+  }
+
   return (
     <div className="flex w-full">
       <div className="flex flex-col justify-center w-full p-4">
@@ -114,11 +121,15 @@ export default function Dashboard() {
               </Tabs>
           </div>
         </div>
-        <div className="w-full h-full p-4">
-          <div className="rounded-md w-full h-1/2 flex justify-center">
+        <div className="w-full h-3/4 pl-4 pr-4">
+          <div className="rounded-md w-full h-1/2 flex items-center flex-col mb-24">
+            <Select label="Asset" defaultSelectedKeys={["bUSD"]} className="w-24 text-black" onChange={handleSelection}>
+              <SelectItem key="bUSD" textValue="bUSD" className="text-black">bUSD</SelectItem> 
+              <SelectItem key="sUSDT" textValue="sUSDT" className="text-black">sUSDT</SelectItem> 
+            </Select>
             <Line options={options} data={data}/>
           </div>
-          <h1 className="mt-2 mb-2 text-xl">Markets</h1>
+          <h1 className="mb-2 text-xl">Markets</h1>
           <div className="grid grid-cols-3 gap-4">
             <div className="col-span-2 grid grid-cols-2 gap-4">
               <Card>
