@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-col gap-4 p-4 text-black bg-slate-50 w-fit h-screen border-r-4">
+    <nav className="flex flex-col gap-4 p-4 text-black w-fit h-screen border-r-2">
       <div className="flex">
         <Image src={logo} alt="logo" priority="true"/>
       </div>

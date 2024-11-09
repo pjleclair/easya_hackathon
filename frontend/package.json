@@ -19,6 +19,7 @@
     "@stacks/network": "^6.8.1",
     "@stacks/transactions": "^6.9.0",
     "chart.js": "^4.4.6",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "framer-motion": "^11.11.11",
     "next": "latest",
     "node-fetch": "^3.3.2",

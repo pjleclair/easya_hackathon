@@ -7,6 +7,7 @@ import { Divider } from "@nextui-org/react";
 import Swap from "./components/Swap";
 import { Line } from 'react-chartjs-2';
 import { useState } from "react";
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 import {
   Chart as ChartJS,
@@ -26,7 +27,8 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels
 );
 
 export default function Dashboard() {
@@ -37,18 +39,37 @@ export default function Dashboard() {
     plugins: {
       legend: {
         position: 'top',
+        display: false
       },
       title: {
         display: true,
         text: `Portfolio Value`,
       },
+      datalabels: {
+        display: false
+      }
     },
     scales: {
+      x: {
+        grid: {
+          display: false, // This removes the grid lines on the x-axis
+        },
+        ticks: {
+          maxTicksLimit: 5, // Adjust this number to the desired number of labels
+        },
+      },
       y: {
+        grid: {
+          display: false, // This removes the grid lines on the y-axis
+        },
         ticks: {
           callback: function(value) {
+            // Skip the label for the origin (0)
+            if (value < 68000) {
+              return '';
+            }
             return '$' + value.toLocaleString();
-          }
+          },
         }
       }
     }
@@ -79,7 +100,8 @@ export default function Dashboard() {
         data: closePrices,
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
-        tension: 0.1
+        tension: 0.1,
+        pointRadius: 0
       },
     ],
   };
@@ -90,7 +112,7 @@ export default function Dashboard() {
 
   return (
     <div className="flex w-full">
-      <div className="flex flex-col w-full pr-4 pl-4">
+      <div className="flex flex-col w-full pr-4 pl-4 items-center">
         <h1 className="text-2xl p-4">
           Portfolio
         </h1>
@@ -98,12 +120,12 @@ export default function Dashboard() {
         <div className="p-4 flex w-full items-center justify-between">
           <div className="flex gap-4">
             <div>
-              <small className="text-grey">Portfolio</small>
-              <h1 className="text-2xl text-green">$76,456</h1>
+              <small className="">Portfolio</small>
+              <h1 className="text-2xl">$76,456</h1>
             </div>
             <div>
-              <small className="text-grey">Cash</small>
-              <h1 className="text-2xl text-green">$12,345</h1>
+              <small className="">Cash</small>
+              <h1 className="text-2xl">$12,345</h1>
             </div>
           </div>
           <div className="flex gap-2">
@@ -120,12 +142,12 @@ export default function Dashboard() {
               </Tabs>
           </div>
         </div>
-        <div className="w-full h-3/4 pl-4 pr-4">
-          <div className="rounded-md w-full h-1/2 flex items-center flex-col mb-20 mt-8">
+        <div className="w-full h-3/4 pl-4 pr-4 flex flex-col items-center">
+          <div className="rounded-lg w-3/5 h-1/2 flex justify-center items-center flex-col mb-20 mt-8 bg-slate-50 p-4">
             <Line options={options} data={data}/>
           </div>
           <h1 className="mb-2 text-xl">Markets</h1>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 w-full">
             <div className="col-span-2 grid grid-cols-2 gap-4">
               <Card>
                 <CardHeader>
