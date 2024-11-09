@@ -9,7 +9,9 @@ const MarketCard = ({ marketId, name, status, outcomes }) => {
 
       {outcomes.map((outcome) => {
         return (
-          <p className="text-lg flex justify-between my-4 text-black">
+          <div
+            key={outcome.id}
+            className="text-lg flex justify-between my-4 text-black">
             {outcome.name}: {outcome.odds}
             {"% "}
             <div className="flex gap-4">
@@ -20,7 +22,7 @@ const MarketCard = ({ marketId, name, status, outcomes }) => {
                 No
               </button>
             </div>
-          </p>
+          </div>
         );
       })}
     </div>

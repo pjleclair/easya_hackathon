@@ -34,12 +34,14 @@ export default function RootLayout({ children }) {
           {userData !== undefined ? (
             <UserContext.Provider value={{ userData, userSession }}>
               <MarketProvider>
-                <Navbar
-                  userSession={userSession}
-                  userData={userData}
-                  setUserData={setUserData}
-                />
-                <div className="p-4">{children}</div>
+                <div className="flex">
+                  <Navbar
+                    userSession={userSession}
+                    userData={userData}
+                    setUserData={setUserData}
+                  />
+                  {children}
+                </div>
               </MarketProvider>
             </UserContext.Provider>
           ) : (
