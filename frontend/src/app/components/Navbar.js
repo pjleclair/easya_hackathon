@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Navbar({ userSession, userData, setUserData }) {
   return (
-    <nav className="flex flex-col gap-4 p-4 bg-slate-50 w-fit h-screen border-r-4">
+    <nav className="flex flex-col gap-4 p-4 text-black bg-slate-50 w-fit h-screen border-r-4">
       {userData ? (
         <ConnectWallet
           userSession={userSession}
@@ -20,7 +20,7 @@ export default function Navbar({ userSession, userData, setUserData }) {
         ""
       )}
       <div className="flex">
-        <Image src={logo}/>
+        <Image src={logo} />
       </div>
       <div className="border h-px w-full"></div>
       <ul className="flex flex-col justify-center text-center gap-4">
@@ -30,7 +30,7 @@ export default function Navbar({ userSession, userData, setUserData }) {
           </Link>
         </li>
         <li>
-          <Link href="/lend" className="hover:text-orange-500">
+          <Link href="/market" className="hover:text-orange-500">
             Markets
           </Link>
         </li>

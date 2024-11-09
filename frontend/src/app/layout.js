@@ -7,6 +7,7 @@ import { AppConfig, UserSession } from "@stacks/connect";
 
 import { UserContext } from "./UserContext";
 import Navbar from "./components/Navbar";
+import { MarketProvider } from "./MarketContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,17 +30,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen text-black bg-slate-50 flex">
+        <div className="min-h-screen text-white bg-gradient-radial from-white via-pink-200 to-indigo-100 ">
           {userData !== undefined ? (
             <UserContext.Provider value={{ userData, userSession }}>
-              <Navbar
-                userSession={userSession}
-                userData={userData}
-                setUserData={setUserData}
-              />
-              <div className="p-4">
-                {children}
-              </div>
+              <MarketProvider>
+                <div className="flex">
+                  <Navbar
+                    userSession={userSession}
+                    userData={userData}
+                    setUserData={setUserData}
+                  />
+                  {children}
+                </div>
+              </MarketProvider>
             </UserContext.Provider>
           ) : (
             ""
