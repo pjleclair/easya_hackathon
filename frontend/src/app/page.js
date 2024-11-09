@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import {Tabs, Tab} from "@nextui-org/tabs";
-import { Divider, Select, SelectItem } from "@nextui-org/react";
+import { Divider } from "@nextui-org/react";
 import Swap from "./components/Swap";
 import { Line } from 'react-chartjs-2';
 import { useState } from "react";
@@ -40,7 +40,7 @@ export default function Dashboard() {
       },
       title: {
         display: true,
-        text: `${asset} Price History`,
+        text: `Portfolio Value`,
       },
     },
     scales: {
@@ -75,14 +75,7 @@ export default function Dashboard() {
     labels: dates,
     datasets: [
       {
-        label: 'Opening Price',
-        data: openPrices,
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        tension: 0.1
-      },
-      {
-        label: 'Closing Price',
+        label: 'Portfolio Value',
         data: closePrices,
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
@@ -97,15 +90,21 @@ export default function Dashboard() {
 
   return (
     <div className="flex w-full">
-      <div className="flex flex-col justify-center w-full p-4">
+      <div className="flex flex-col w-full pr-4 pl-4">
         <h1 className="text-2xl p-4">
           Portfolio
         </h1>
         <div className="border h-px w-full"></div>
         <div className="p-4 flex w-full items-center justify-between">
-          <div>
-            <small className="text-grey">Total balance</small>
-            <h1 className="text-2xl">$123,456</h1>
+          <div className="flex gap-4">
+            <div>
+              <small className="text-grey">Portfolio</small>
+              <h1 className="text-2xl text-green">$76,456</h1>
+            </div>
+            <div>
+              <small className="text-grey">Cash</small>
+              <h1 className="text-2xl text-green">$12,345</h1>
+            </div>
           </div>
           <div className="flex gap-2">
             <Tabs>
@@ -122,11 +121,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="w-full h-3/4 pl-4 pr-4">
-          <div className="rounded-md w-full h-1/2 flex items-center flex-col mb-24">
-            <Select label="Asset" defaultSelectedKeys={["bUSD"]} className="w-24 text-black" onChange={handleSelection}>
-              <SelectItem key="bUSD" textValue="bUSD" className="text-black">bUSD</SelectItem> 
-              <SelectItem key="sUSDT" textValue="sUSDT" className="text-black">sUSDT</SelectItem> 
-            </Select>
+          <div className="rounded-md w-full h-1/2 flex items-center flex-col mb-20 mt-8">
             <Line options={options} data={data}/>
           </div>
           <h1 className="mb-2 text-xl">Markets</h1>
