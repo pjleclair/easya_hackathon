@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen text-white bg-slate-800">
+        <div className="min-h-screen text-black bg-slate-50 flex">
           {userData !== undefined ? (
             <UserContext.Provider value={{ userData, userSession }}>
               <Navbar
@@ -37,7 +37,9 @@ export default function RootLayout({ children }) {
                 userData={userData}
                 setUserData={setUserData}
               />
-              {children}
+              <div className="p-4">
+                {children}
+              </div>
             </UserContext.Provider>
           ) : (
             ""
