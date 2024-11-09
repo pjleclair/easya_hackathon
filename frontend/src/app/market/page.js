@@ -14,19 +14,13 @@ export default function Market() {
 
   return (
     <div className="flex-col pb-5">
-      <h1 className="mt-8 text-4xl text-black text-center">BitBet</h1>
-      <p className="mt-4 text-center">
+      <h1 className="mt-8 text-4xl font-bold text-black text-center">BitBet</h1>
+      <h4 className="mt-4 font-semibold text-black text-center">
         Decentralized prediction markets with sBTC.
-      </p>
+      </h4>
       <div className="grid grid-cols-3 gap-4 mt-8 mx-4">
         {markets.map((market) => (
-          <MarketCard
-            key={market.id}
-            marketId={market.id}
-            name={market.name}
-            status={market.status}
-            outcomes={market.outcomes}
-          />
+          <MarketCard key={market.id} market={market} />
         ))}
       </div>
     </div>
