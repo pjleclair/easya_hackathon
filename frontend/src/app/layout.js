@@ -39,9 +39,7 @@ export default function RootLayout({ children }) {
                   userData={userData}
                   setUserData={setUserData}
                 />
-              <div className="p-4">
-                  {children}
-              </div>
+                <div className="p-4">{children}</div>
               </MarketProvider>
             </UserContext.Provider>
           ) : (
