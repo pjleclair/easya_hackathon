@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "BitBet",
+  description: "A decentralized prediction market platform built on Stacks",
+};
 //! Maybe not use client when we get the apis
 "use client";
 
@@ -9,9 +13,9 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="mt-8 text-4xl text-center">Lagoon</h1>
+      <h1 className="mt-8 text-4xl text-center">BitBet</h1>
       <p className="mt-4 text-center">
-        Decentralized lending and borrowing with sBTC.
+        Decentralized prediction markets with sBTC.
       </p>
       <div className="grid grid-cols-3 gap-4 mt-8 mx-4">
         {markets.map((market) => (
