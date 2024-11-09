@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "logo" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXE4WXy29ldj6Ds63QuzHAV8G3e3OvPf7_A&s",
     "name": "Will Bitcoin reach by the end of 2023?",
     "category": "Cryptocurrency",
     "status": "Open",
@@ -13,6 +14,16 @@
       {
         "id": "2",
         "name": "$75,000",
+        "odds": 0.75
+      },
+      {
+        "id": "3",
+        "name": "$65,000",
+        "odds": 0.75
+      },
+      {
+        "id": "4",
+        "name": "$55,000",
         "odds": 0.75
       }
     ]
