@@ -8,9 +8,9 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="flex flex-col gap-4 p-4 text-black bg-slate-50 w-fit h-screen border-r-4">
-      <div className="flex">
-        <Image src={logo} alt="logo" priority="true"/>
+    <nav className="flex flex-col gap-4 p-4 m-2 rounded-lg bg-white text-black w-1/6 shadow-md rounded-br-lg">
+      <div className="flex mt-12 mb-5 items-center justify-center">
+        <Image src={logo} alt="logo" priority="true" />
       </div>
       <spacer className="h-10"></spacer>
       <ul className="flex text-xl font-semibold flex-col justify-center text-start gap-4">

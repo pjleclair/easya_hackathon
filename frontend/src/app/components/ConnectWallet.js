@@ -46,7 +46,7 @@ export default function ConnectWallet({ userSession, userData, setUserData }) {
           </div>
 
           <button
-            className={`px-4 py-2 mt-4 font-bold text-white transition duration-500 ease-in-out rounded bg-red-500 hover:bg-red-700 ${
+            className={`px-4 py-2 mt-4 font-semibold text-white transition duration-500 ease-in-out rounded bg-red-500 hover:bg-red-700 ${
               !showDisconnect ? "hidden" : ""
             }`}
             onClick={disconnectWallet}>
@@ -55,7 +55,7 @@ export default function ConnectWallet({ userSession, userData, setUserData }) {
         </>
       ) : (
         <button
-          className="px-4 w-64 py-2 font-bold text-white transition duration-500 ease-in-out rounded bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-orange-500"
+          className="px-4 w-64 py-2 font-semibold text-white transition duration-500 ease-in-out rounded bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-orange-500"
           onClick={connectWallet}>
           Connect Wallet
         </button>
