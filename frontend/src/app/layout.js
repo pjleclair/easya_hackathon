@@ -7,6 +7,7 @@ import { AppConfig, UserSession } from "@stacks/connect";
 
 import { UserContext } from "./UserContext";
 import Navbar from "./components/Navbar";
+
 import { MarketProvider } from "./MarketContext";
 
 const inter = Inter({ subsets: ["latin"] });
