@@ -1,9 +1,11 @@
 import { CardHeader, Card, CardBody } from "@nextui-org/card"
 import { Divider } from "@nextui-org/react"
-import { Select } from "@nextui-org/react"
+import { Select, SelectItem } from "@nextui-org/react"
 import { Button } from "@nextui-org/react"
+import { Input } from "@nextui-org/react"
 import Levels from "./assets/levels.svg"
 import Image from "next/image"
+import Token from "./assets/token.svg"
 
 export default function Swap() {
     return(
@@ -16,9 +18,10 @@ export default function Swap() {
                     <a>Withdraw</a>
                 </CardHeader>
                 <CardBody className="flex flex-col gap-2">
-                    <Select></Select>
-                    <Select></Select>
-                    <Select></Select>
+                    <Select label="Asset" defaultSelectedKeys={["susdt"]}>
+                        <SelectItem key="susdt" textValue="bUSD" startContent={<Image alt="token" src={Token}/>}>bUSD</SelectItem>
+                    </Select>
+                    <Input type="number" label="Amount" placeholder="bUSD"/>
                     <Button color="success">Deposit</Button>
                 </CardBody>
             </Card>
