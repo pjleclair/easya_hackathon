@@ -9,6 +9,7 @@ import { UserContext } from "./UserContext";
 import Navbar from "./components/Navbar";
 
 import { MarketProvider } from "./MarketContext";
+import ConnectWallet from "./components/ConnectWallet";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,12 +36,15 @@ export default function RootLayout({ children }) {
           {userData !== undefined ? (
             <UserContext.Provider value={{ userData, userSession }}>
               <MarketProvider>
-                <div className="flex">
-                  <Navbar
+                <div className="fixed top-0 right-0">
+                  <ConnectWallet
                     userSession={userSession}
                     userData={userData}
                     setUserData={setUserData}
                   />
+                </div>
+                <div className="flex">
+                  <Navbar />
                   {children}
                 </div>
               </MarketProvider>
