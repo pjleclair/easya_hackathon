@@ -28,12 +28,12 @@
       {
         "id": "1",
         "name": "Yes",
-        "odds": 0.20
+        "odds": 0.2
       },
       {
         "id": "2",
         "name": "No",
-        "odds": 0.80
+        "odds": 0.8
       }
     ]
   },
@@ -47,12 +47,12 @@
       {
         "id": "1",
         "name": "Yes",
-        "odds": 0.30
+        "odds": 0.3
       },
       {
         "id": "2",
         "name": "No",
-        "odds": 0.70
+        "odds": 0.7
       }
     ]
   },
@@ -167,114 +167,6 @@
         "id": "2",
         "name": "No",
         "odds": 0.57
-      }
-    ]
-  },
-  {
-    "id": "31",
-    "name": "Will Bitcoin reach by the end of 2023?",
-    "category": "Cryptocurrency",
-    "status": "Open",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.25
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.75
-      }
-    ]
-  },
-  {
-    "id": "32",
-    "name": "Will the Democrats win the 2024 US Presidential Election?",
-    "category": "Politics",
-    "status": "Open",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.55
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.45
-      }
-    ]
-  },
-  {
-    "id": "33",
-    "name": "Will SpaceX successfully launch Starship by the end of 2023?",
-    "category": "Space",
-    "status": "Closed",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.6
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.4
-      }
-    ]
-  },
-  {
-    "id": "41",
-    "name": "Will Bitcoin reach by the end of 2023?",
-    "category": "Cryptocurrency",
-    "status": "Open",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.25
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.75
-      }
-    ]
-  },
-  {
-    "id": "42",
-    "name": "Will the Democrats win the 2024 US Presidential Election?",
-    "category": "Politics",
-    "status": "Open",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.55
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.45
-      }
-    ]
-  },
-  {
-    "id": "43",
-    "name": "Will SpaceX successfully launch Starship by the end of 2023?",
-    "category": "Space",
-    "status": "Closed",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.6
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.4
       }
     ]
   }
