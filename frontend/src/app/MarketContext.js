@@ -8,6 +8,10 @@ const MarketContext = createContext();
 export const MarketProvider = ({ children }) => {
   const [markets, setMarkets] = useState(marketJson);
 
+  const getMarket = (marketId) => {
+    return markets.find((market) => market.id === marketId);
+  };
+
   const addMarket = (market) => {
     setMarkets([...markets, market]);
   };
@@ -26,7 +30,7 @@ export const MarketProvider = ({ children }) => {
 
   return (
     <MarketContext.Provider
-      value={{ markets, addMarket, removeMarket, updateMarket }}>
+      value={{ markets, getMarket, addMarket, removeMarket, updateMarket }}>
       {children}
     </MarketContext.Provider>
   );
