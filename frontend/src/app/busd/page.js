@@ -5,12 +5,16 @@ import { Button } from "@nextui-org/react";
 import {Card, CardBody, CardHeader, Divider, Select, SelectItem} from "@nextui-org/react";
 import Image from "next/image";
 
+import toast from "react-hot-toast";
+
 import Token from "../components/assets/token.svg";
 
 import BtcLogo from "../components/assets/btc-icon.svg";
 
 export default function bUSD() {
-
+    const notify = () => {
+        toast.success("Deposited successfully!")
+    }
 
     return (
         <div className="flex flex-col pl-4 pr-4 items-center w-full">
@@ -61,7 +65,7 @@ export default function bUSD() {
                                 <SelectItem key="susdt" textValue="bUSD" startContent={<Image alt="token" src={Token}/>}>bUSD</SelectItem>
                             </Select>
                             <Input type="number" label="Amount" placeholder="bUSD"/>
-                            <Button color="success">Deposit</Button>
+                            <Button onClick={notify} color="success">Deposit</Button>
                         </CardBody>
                     </Card>
                 </div>

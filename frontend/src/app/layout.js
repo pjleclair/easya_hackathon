@@ -1,6 +1,9 @@
 "use client";
 
 import "./globals.css";
+
+import { Toaster } from 'react-hot-toast';
+
 import { Inter } from "next/font/google";
 import React, { useState, useEffect } from "react";
 import { AppConfig, UserSession } from "@stacks/connect";
@@ -52,6 +55,7 @@ export default function RootLayout({ children }) {
           ) : (
             ""
           )}
+          <Toaster position="bottom-right"/>
         </div>
       </body>
     </html>

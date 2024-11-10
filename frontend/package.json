@@ -26,6 +26,7 @@
     "react": "latest",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "latest",
+    "react-hot-toast": "^2.4.1",
     "sbtc": "^0.1.7",
     "sbtc-bridge-lib": "^1.1.8"
   },
