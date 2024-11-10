@@ -6,14 +6,9 @@ import MarketCard from "../components/MarketCard";
 import { useMarket } from "../MarketContext";
 import MarketDetailsPage from "../components/MarketDetailsPage";
 import { UserContext } from "../UserContext";
-import {
-  broadcastTransaction,
-  FungibleConditionCode,
-  makeContractCall,
-  makeStandardSTXPostCondition,
-  uintCV,
-} from "@stacks/transactions";
-import { StacksTestnet } from "@stacks/network";
+import { uintCV, PostConditionMode } from "@stacks/transactions";
+import { openContractCall } from "@stacks/connect";
+import { StacksMocknet, StacksTestnet } from "@stacks/network";
 
 export default function Market() {
   const { markets } = useMarket();
@@ -21,42 +16,33 @@ export default function Market() {
   const { userData } = useContext(UserContext);
 
   const createMarket = async () => {
-    if (!userData.profile.stxAddress.testnet) {
-      alert("Please connect your wallet to create a market.");
-      return;
-    }
-    const senderKey = userData.appPrivateKey;
-    const stacksAddress = userData.profile.stxAddress.testnet;
+    // if (!userData.profile.stxAddress.testnet) {
+    //   alert("Please connect your wallet to create a market.");
+    //   return;
+    // }
+    // const senderKey = userData.appPrivateKey;
+    // const stacksAddress = userData.profile.stxAddress.testnet;
+      const functionArgs = [
+        uintCV(2),
+        uintCV(100)
+      ];
+
+    const contractAddress = "ST1ZGCN5D7C3MZZY4GC31F8ANDD5VHS5FQ7HEKNQR"; // Replace with your contract address
+    const contractName = "fair-turquoise-ferret"; // Replace with your contract name
+    const functionName = "create-option"; // Function for deposit
 
     const txOptions = {
-      contractAddress: "ST1ZGCN5D7C3MZZY4GC31F8ANDD5VHS5FQ7HEKNQR",
-      contractName: "fair-turquoise-ferret",
-      functionName: "create-option",
-      functionArgs: [uintCV(1), uintCV(100000)], // Adjust these values as needed
-      senderKey: senderKey,
+      contractAddress,
+      contractName,
+      functionName,
+      functionArgs,
+      postConditionMode: PostConditionMode.Allow,
       network: new StacksTestnet(),
-      fee: 3000, // Increase fee in microSTX
-      postConditions: [
-        makeStandardSTXPostCondition(
-          stacksAddress,
-          FungibleConditionCode.LessEqual,
-          1500, // Adjust post condition to match your token amount
-        ),
-      ],
+      onFinish: (data) => {
+        console.log(data);
+      }
     };
-
-    try {
-      const transaction = await makeContractCall(txOptions);
-      const result = await broadcastTransaction(
-        transaction,
-        new StacksTestnet(),
-      );
-      console.log(result);
-      alert("Market created successfully! " + result.txid);
-    } catch (error) {
-      console.error(error);
-      alert("Failed to create market: " + error.message);
-    }
+    await openContractCall(txOptions);
   };
 
   return (
