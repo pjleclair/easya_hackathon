@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React from "react";
 
-const BuyPosition = ({ selectedOutcome, selectedPosition, onBuyPosition, reset }) => {
-  const [amount, setAmount] = useState(0);
-
+const BuyPosition = ({
+  selectedOutcome,
+  selectedPosition,
+  onBuyPosition,
+  reset,
+  amount,
+  setAmount,
+}) => {
   return (
     <div className="flex flex-col text-black gap-4">
       <h3 className="text-lg font-semibold">Buy Position</h3>
@@ -16,7 +21,7 @@ const BuyPosition = ({ selectedOutcome, selectedPosition, onBuyPosition, reset }
       </div>
       <div className="flex justify-between">
         <p className="text-lg">Price:</p>
-        <p className="text-lg">${selectedOutcome.odds}</p>
+        <p className="text-lg">{selectedOutcome.odds}</p>
       </div>
       <div className="flex justify-between">
         <p className="text-lg">Shares:</p>

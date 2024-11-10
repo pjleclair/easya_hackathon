@@ -6,6 +6,7 @@ import BuyPosition from "./BuyPosition";
 const MarketDetailsPage = ({ market }) => {
   const [selectedOutcome, setSelectedOutcome] = useState(market.outcomes[0]);
   const [selectedPosition, setSelectedPosition] = useState(true);
+  const [amount, setAmount] = useState(0);
 
   const onBuyPosition = () => {
     if (!selectedOutcome || !selectedPosition || amount <= 0) {
@@ -66,6 +67,8 @@ const MarketDetailsPage = ({ market }) => {
             selectedOutcome={selectedOutcome}
             selectedPosition={selectedPosition}
             onBuyPosition={onBuyPosition}
+            amount={amount}
+            setAmount={setAmount}
             reset={reset}
           />
         </div>
