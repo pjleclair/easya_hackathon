@@ -15,11 +15,11 @@ const BuyPosition = ({ selectedOutcome, selectedPosition, onBuyPosition, reset }
         <p className="text-lg">{selectedPosition ? "Buy" : "Sell"}</p>
       </div>
       <div className="flex justify-between">
-        <p className="text-lg">Odds:</p>
-        <p className="text-lg">{selectedOutcome.odds}</p>
+        <p className="text-lg">Price:</p>
+        <p className="text-lg">${selectedOutcome.odds}</p>
       </div>
       <div className="flex justify-between">
-        <p className="text-lg">Amount:</p>
+        <p className="text-lg">Shares:</p>
         <input
           className="w-20 text-lg border-2 border-gray-200 rounded"
           required
@@ -32,7 +32,7 @@ const BuyPosition = ({ selectedOutcome, selectedPosition, onBuyPosition, reset }
       </div>
       <div className="flex justify-between">
         <p className="text-lg">Total:</p>
-        <p className="text-lg">{amount * selectedOutcome.odds} STX</p>
+        <p className="text-lg">{amount * selectedOutcome.odds} bUSD</p>
       </div>
       <div className="flex gap-5">
         <button
