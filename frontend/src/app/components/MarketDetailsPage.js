@@ -40,7 +40,7 @@ const MarketDetailsPage = ({ market }) => {
     <div className="w-full h-full min-h-screen p-4">
       <div className="flex items-center justify-center mx-40 my-8">
         <div className="flex-col gap-4 text-center justify-center text-black ">
-          <p className="text-4xl font-semibold">{market.name}</p>
+          <p className="text-4xl font-semibold drop-shadow-lg">{market.name}</p>
           <p className="font-semibold">Status: {market.status}</p>
         </div>
       </div>

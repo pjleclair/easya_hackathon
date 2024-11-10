@@ -9,13 +9,13 @@ import { createMarket, getOption } from "../utils/contractCall";
 import { UserContext } from "../UserContext";
 
 export default function Market() {
-  const { markets } = useMarket();
+  const { markets, getMarket, updateMarket } = useMarket();
   const [selectedMarket, setSelectedMarket] = useState(null);
   const { userData } = useContext(UserContext);
-  const { getMarket, updateMarket } = useMarket();
 
   useEffect(() => {
-    if (userData != {} && userData.profile) getOption(userData, getMarket, updateMarket);
+    if (userData != {} && userData.profile)
+      getOption(userData, getMarket, updateMarket);
   }, [userData]);
 
   return (
@@ -34,7 +34,7 @@ export default function Market() {
             className="mt-4 ml-4 text-white bg-gray-800 rounded px-4 py-2">
             Get Market
           </button>
-          <h1 className="mt-8 text-4xl font-semibold text-black text-center">
+          <h1 className="mt-8 text-4xl font-semibold text-black text-center drop-shadow-lg">
             BitBet
           </h1>
           <h4 className="mt-4 font-semibold text-black text-center">

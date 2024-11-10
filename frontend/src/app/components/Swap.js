@@ -13,9 +13,9 @@ export default function Swap() {
             <Image src={Levels} alt='levels' className="mt-32"/>
             <Card className="mt-24">
                 <CardHeader className="p-2 flex gap-2 justify-center">
-                    <a>Deposit</a>
+                    <a className="font-semibold cursor-pointer hover:drop-shadow-md">Deposit</a>
                     <Divider orientation="vertical" />
-                    <a>Withdraw</a>
+                    <a className="cursor-pointer hover:drop-shadow-md">Withdraw</a>
                 </CardHeader>
                 <CardBody className="flex flex-col gap-2">
                     <Select label="Asset" defaultSelectedKeys={["susdt"]}>
