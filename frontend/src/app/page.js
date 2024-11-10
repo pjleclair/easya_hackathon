@@ -9,6 +9,12 @@ import { Line } from 'react-chartjs-2';
 import { useState } from "react";
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
+import BtcLogo from "./components/assets/btc-icon.svg";
+
+import Steelers from "./components/assets/steelers.svg";
+
+import Chiefs from "./components/assets/chiefs.svg";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -212,13 +218,45 @@ export default function Dashboard() {
                 <CardHeader className="flex justify-center">
                   Activity
                 </CardHeader>
-                <CardBody>Text</CardBody>
+                <CardBody>
+                  <div className="flex h-8 justify-center gap-4">
+                    <Image src={Chiefs} alt="chiefs logo" width={20} height={20}/>
+                    <div className="flex flex-col">
+                      <div className="text-xs font-semibold">Will the Chiefs win the Superbowl?</div>
+                      <small className="flex gap-2">Phil bought <span className="text-green-600"> Yes </span> at 19.5¢ ($39.20)</small>
+                    </div>
+                  </div>
+                </CardBody>
                 <Divider />
-                <CardBody>Text</CardBody>
+                <CardBody>
+                  <div className="flex h-8 justify-center gap-4">
+                    <Image src={BtcLogo} alt="btc logo" width={15} height={15}/>
+                    <div className="flex flex-col">
+                      <div className="text-xs font-semibold">Will BTC be {'>'} 75k on Nov. 30th?</div>
+                      <small className="flex gap-2">Hayley sold <span className="text-red-600"> No </span> at 40.2¢ ($254.87)</small>
+                    </div>
+                  </div>
+                </CardBody>
                 <Divider />
-                <CardBody>Text</CardBody>
+                <CardBody>
+                  <div className="flex h-8 justify-center gap-4">
+                    <Image src={Steelers} alt="btc logo" width={15} height={15}/>
+                    <div className="flex flex-col">
+                      <div className="text-xs font-semibold">Will the Steelers win the Superbowl?</div>
+                      <small className="flex gap-2">Dom bought <span className="text-red-600"> No </span> at 97.7¢ ($488.50)</small>
+                    </div>
+                  </div>
+                </CardBody>
                 <Divider />
-                <CardBody>Text</CardBody>
+                <CardBody>
+                  <div className="flex h-8 justify-center gap-4">
+                    <Image src={Steelers} alt="btc logo" width={15} height={15}/>
+                    <div className="flex flex-col">
+                      <div className="text-xs font-semibold">Will BTC be {'>'} 75k on Nov. 30th?</div>
+                      <small className="flex gap-2">Alex bought <span className="text-green-600"> Yes </span> at 59.8¢ ($41.86)</small>
+                    </div>
+                  </div>
+                </CardBody>
               </Card>
             </div>
           </div>
