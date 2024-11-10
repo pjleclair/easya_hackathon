@@ -40,6 +40,8 @@ ChartJS.register(
 export default function Dashboard() {
   const [asset, setAsset] = useState("bUSD");
 
+  const [tab, setTab] = useState("assets");
+
   const logo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXE4WXy29ldj6Ds63QuzHAV8G3e3OvPf7_A&s";
 
   const chiefsLogo = "https://cdn.freebiesupply.com/images/large/2x/kansas-city-chiefs-logo-transparent.png";
@@ -120,10 +122,6 @@ export default function Dashboard() {
     ],
   };
 
-  const handleSelection = (e) => {
-    setAsset(e.target.value);
-  }
-
   return (
     <div className="flex w-full">
       <div className="flex flex-col w-full pr-4 pl-4 items-center">
@@ -134,15 +132,15 @@ export default function Dashboard() {
           <div className="flex gap-4">
             <div>
               <small className="">Portfolio</small>
-              <h1 className="text-2xl">$76,456</h1>
+              <h1 className="text-2xl">$988.24</h1>
             </div>
             <div>
               <small className="">Cash</small>
-              <h1 className="text-2xl">$12,345</h1>
+              <h1 className="text-2xl">$850</h1>
             </div>
           </div>
           <div className="flex gap-2">
-            <Tabs>
+            <Tabs onSelectionChange={setTab} selectedKey={tab}>
               <Tab key="portfolio" title="Portfolio"></Tab>
               <Tab key="assets" title="Assets"></Tab>
               <Tab key="history" title="History"></Tab>
@@ -150,9 +148,73 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="w-full h-3/4 pl-4 pr-4 flex flex-col items-center">
-          <div className="rounded-lg w-3/5 h-1/2 flex justify-center items-center flex-col mb-20 mt-8 bg-slate-50 p-4">
+          { tab === "portfolio" && <div className="rounded-lg w-3/5 h-1/2 flex justify-center items-center flex-col mb-20 mt-8 bg-slate-50 p-4">
             <Line options={options} data={data}/>
+          </div>}
+          {tab === "assets" &&
+            <div className="rounded-lg w-3/5 h-1/2 flex justify-center items-center flex-col mb-20 mt-8 bg-slate-50 p-4">
+              <Card>
+                <CardBody>
+                    <div className="flex h-8 justify-center gap-4">
+                      <Image src={BtcLogo} alt="btc logo" width={35} height={35}/>
+                      <div className="flex flex-col">
+                        <div className="text-[9px] font-semibold">Will Bitcoin reach $100,000 by the end of 2024?</div>
+                        <small className="flex gap-2 text-xs"><span className="text-green-600">Yes 25¢</span><div className="ml-auto">$149.98</div><span className="text-red-600">(-0.01%)</span></small>
+                      </div>
+                      <div className="flex gap-2 justify-center items-center">
+                        <Button color="success">Trade</Button>
+                        <Button color="default">Share</Button>
+                      </div>
+                    </div>
+                  </CardBody>
+              </Card>
+              {/* <Card>
+                <CardBody>
+                    <div className="flex h-8 justify-center gap-4">
+                      <Image src={Chiefs} alt="chiefs logo" width={35} height={35}/>
+                      <div className="flex flex-col">
+                        <div className="text-xs font-semibold">Will the Chiefs win the Superbowl?</div>
+                        <small className="flex gap-2 text-xs"><span className="text-green-600">Yes 19.5¢</span><div className="ml-auto">$30.07</div><span className="text-green-600">(35.41%)</span></small>
+                      </div>
+                      <div className="flex gap-2 justify-center items-center">
+                        <Button color="success">Trade</Button>
+                        <Button color="default">Share</Button>
+                      </div>
+                    </div>
+                  </CardBody>
+              </Card>
+              <Card>
+                <CardBody>
+                    <div className="flex h-8 justify-center gap-4">
+                      <Image src={Chiefs} alt="chiefs logo" width={35} height={35}/>
+                      <div className="flex flex-col">
+                        <div className="text-xs font-semibold">Will the Chiefs win the Superbowl?</div>
+                        <small className="flex gap-1">You bought <span className="text-green-600">Yes</span> at 19.5¢ ($39.20)</small>
+                      </div>
+                      <div className="flex gap-2 justify-center items-center">
+                        <Button color="success">Trade</Button>
+                        <Button color="default">Share</Button>
+                      </div>
+                    </div>
+                  </CardBody>
+              </Card>
+              <Card>
+                <CardBody>
+                    <div className="flex h-8 justify-center gap-4">
+                      <Image src={Chiefs} alt="chiefs logo" width={35} height={35}/>
+                      <div className="flex flex-col">
+                        <div className="text-xs font-semibold">Will the Chiefs win the Superbowl?</div>
+                        <small className="flex gap-1">You bought <span className="text-green-600">Yes</span> at 19.5¢ ($39.20)</small>
+                      </div>
+                      <div className="flex gap-2 justify-center items-center">
+                        <Button color="success">Trade</Button>
+                        <Button color="default">Share</Button>
+                      </div>
+                    </div>
+                  </CardBody>
+              </Card> */}
           </div>
+          }
           <h1 className="mb-2 text-xl drop-shadow-lg">Markets</h1>
           <div className="grid grid-cols-3 gap-4 w-full">
             <div className="col-span-2 grid grid-cols-2 gap-4">
