@@ -1,19 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import Outcomes from "./Outcomes";
 import BuyPosition from "./BuyPosition";
+import { buyOption, sellOption } from "../utils/contractCall";
+import { UserContext } from "../UserContext";
 
 const MarketCard = ({ market, selectMarket }) => {
+  const { userData } = useContext(UserContext);
   const [selectedOutcome, setSelectedOutcome] = useState(null);
   const [selectedPosition, setSelectedPosition] = useState(null);
   const [amount, setAmount] = useState(0);
 
-  const onBuyPosition = () => {
-    if (!selectedOutcome || !selectedPosition || amount <= 0) {
+  const onBuyPosition = async () => {
+    if (
+      userData == {} ||
+      !selectedOutcome ||
+      selectedPosition == null ||
+      amount <= 0
+    ) {
       alert("Please select an outcome and position and enter a valid amount");
+      console.log(selectedOutcome, selectedPosition, amount);
+
       return;
     }
-    // Call the buy position API
+
+    const action =
+      (selectedOutcome.id == 1 && selectedPosition) ||
+      (selectedOutcome.id == 2 && selectedPosition)
+        ? buyOption
+        : sellOption;
+    await action(userData, selectedOutcome.id, amount);
+
     alert("Position bought successfully");
     setSelectedOutcome(null);
     setSelectedPosition(null);
@@ -25,11 +42,6 @@ const MarketCard = ({ market, selectMarket }) => {
     setSelectedPosition(null);
     setAmount(0);
   };
-
-  useEffect(() => {
-    setSelectedOutcome(null);
-    setSelectedPosition(null);
-  }, [market]);
 
   const handleSelect = (outcome, isPositivePosition) => {
     setSelectedOutcome(outcome);
@@ -60,6 +72,8 @@ const MarketCard = ({ market, selectMarket }) => {
           selectedOutcome={selectedOutcome}
           selectedPosition={selectedPosition}
           onBuyPosition={onBuyPosition}
+          amount={amount}
+          setAmount={setAmount}
           reset={reset}
         />
       ) : (

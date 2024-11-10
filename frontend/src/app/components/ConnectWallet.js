@@ -7,6 +7,9 @@ import profile from "./assets/profile.svg";
 export default function ConnectWallet({ userSession, userData, setUserData }) {
   const [showDisconnect, setShowDisconnect] = useState(false);
 
+  //log the userData to the console to see what it contains
+  console.log(userData);
+
   const connectWallet = () => {
     showConnect({
       userSession,
