@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
-import {Tabs, Tab} from "@nextui-org/tabs";
+import { Tabs, Tab } from "@nextui-org/tabs";
 import { Divider } from "@nextui-org/react";
 import Swap from "./components/Swap";
 import { Line } from 'react-chartjs-2';
@@ -116,7 +116,7 @@ export default function Dashboard() {
         <h1 className="text-2xl p-4">
           Portfolio
         </h1>
-        <div className="border h-px w-full"></div>
+        <div className="border-b-1 h-px w-full"></div>
         <div className="p-4 flex w-full items-center justify-between">
           <div className="flex gap-4">
             <div>
@@ -130,16 +130,10 @@ export default function Dashboard() {
           </div>
           <div className="flex gap-2">
             <Tabs>
-                <Tab key="portfolio" title="Portfolio">
-                  
-                </Tab>
-                <Tab key="assets" title="Assets">
-                  
-                </Tab>
-                <Tab key="history" title="History">
-                  
-                </Tab>
-              </Tabs>
+              <Tab key="portfolio" title="Portfolio"></Tab>
+              <Tab key="assets" title="Assets"></Tab>
+              <Tab key="history" title="History"></Tab>
+            </Tabs>
           </div>
         </div>
         <div className="w-full h-3/4 pl-4 pr-4 flex flex-col items-center">
@@ -151,28 +145,28 @@ export default function Dashboard() {
             <div className="col-span-2 grid grid-cols-2 gap-4">
               <Card>
                 <CardHeader>
-                  <Image />
-                  Market Name
-                </CardHeader>
-                <CardBody>Here is some more info.</CardBody>
-              </Card>
-              <Card>
-              <CardHeader>
-                  <Image />
+                  <Image alt="market" src=""/>
                   Market Name
                 </CardHeader>
                 <CardBody>Here is some more info.</CardBody>
               </Card>
               <Card>
                 <CardHeader>
-                  <Image />
+                  <Image alt="market" src="" />
                   Market Name
                 </CardHeader>
                 <CardBody>Here is some more info.</CardBody>
               </Card>
               <Card>
                 <CardHeader>
-                  <Image />
+                  <Image alt="market" src="" />
+                  Market Name
+                </CardHeader>
+                <CardBody>Here is some more info.</CardBody>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <Image alt="market" src="" />
                   Market Name
                 </CardHeader>
                 <CardBody>Here is some more info.</CardBody>
@@ -183,21 +177,13 @@ export default function Dashboard() {
                 <CardHeader className="flex justify-center">
                   Activity
                 </CardHeader>
-                <CardBody>
-                  Text
-                </CardBody>
+                <CardBody>Text</CardBody>
                 <Divider />
-                <CardBody>
-                  Text
-                </CardBody>
+                <CardBody>Text</CardBody>
                 <Divider />
-                <CardBody>
-                  Text
-                </CardBody>
+                <CardBody>Text</CardBody>
                 <Divider />
-                <CardBody>
-                  Text
-                </CardBody>
+                <CardBody>Text</CardBody>
               </Card>
             </div>
           </div>
@@ -207,5 +193,5 @@ export default function Dashboard() {
         <Swap />
       </div>
     </div>
-  )
+  );
 }

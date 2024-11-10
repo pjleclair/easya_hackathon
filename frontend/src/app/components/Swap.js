@@ -9,8 +9,8 @@ import Token from "./assets/token.svg"
 
 export default function Swap() {
     return(
-        <div className="border-l-2 flex flex-col h-full text-black p-4">
-            <Image src={Levels} className="mt-32"/>
+        <div className="border-l-1 flex flex-col h-full text-black p-4">
+            <Image src={Levels} alt='levels' className="mt-32"/>
             <Card className="mt-24">
                 <CardHeader className="p-2 flex gap-2 justify-center">
                     <a>Deposit</a>
