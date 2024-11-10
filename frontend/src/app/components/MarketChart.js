@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
+import ChartDataLabels from "chartjs-plugin-datalabels";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -18,19 +20,22 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels,
 );
 
 const MarketChart = ({ market }) => {
   const customGridLines = {
-    id: 'customGridLines',
+    id: "customGridLines",
     beforeDraw: (chart) => {
       const ctx = chart.ctx;
       const yAxis = chart.scales.y;
       const xAxis = chart.scales.x;
 
       chart.data.datasets.forEach((dataset, index) => {
-        const yValue = yAxis.getPixelForValue(dataset.data[dataset.data.length - 1]);
+        const yValue = yAxis.getPixelForValue(
+          dataset.data[dataset.data.length - 1],
+        );
         ctx.save();
         ctx.beginPath();
         ctx.moveTo(xAxis.left, yValue);
@@ -106,6 +111,9 @@ const MarketChart = ({ market }) => {
     },
     plugins: {
       legend: {
+        display: false,
+      },
+      datalabels: {
         display: false,
       },
     },

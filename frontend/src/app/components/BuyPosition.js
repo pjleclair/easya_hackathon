@@ -12,7 +12,7 @@ const BuyPosition = ({ selectedOutcome, selectedPosition, onBuyPosition, reset }
       </div>
       <div className="flex justify-between">
         <p className="text-lg">Position:</p>
-        <p className="text-lg">{selectedPosition ? "Yes" : "No"}</p>
+        <p className="text-lg">{selectedPosition ? "Buy" : "Sell"}</p>
       </div>
       <div className="flex justify-between">
         <p className="text-lg">Odds:</p>
@@ -38,7 +38,7 @@ const BuyPosition = ({ selectedOutcome, selectedPosition, onBuyPosition, reset }
         <button
           onClick={onBuyPosition}
           className="w-40 bg-gradient-to-r from-green-400 to-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
-          Buy
+          Execute
         </button>
         <button
           onClick={reset}
