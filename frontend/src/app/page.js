@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Card, CardBody, CardHeader } from "@nextui-org/card";
 import { Tabs, Tab } from "@nextui-org/tabs";
-import { Divider } from "@nextui-org/react";
+import { Button, Divider } from "@nextui-org/react";
 import Swap from "./components/Swap";
 import { Line } from 'react-chartjs-2';
 import { useState } from "react";
@@ -33,6 +33,8 @@ ChartJS.register(
 
 export default function Dashboard() {
   const [asset, setAsset] = useState("bUSD");
+
+  const logo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXE4WXy29ldj6Ds63QuzHAV8G3e3OvPf7_A&s";
 
   const options = {
     responsive: true,
@@ -113,10 +115,9 @@ export default function Dashboard() {
   return (
     <div className="flex w-full">
       <div className="flex flex-col w-full pr-4 pl-4 items-center">
-        <h1 className="text-2xl p-4">
+        <h1 className="text-4xl p-4 font-semibold">
           Portfolio
         </h1>
-        <div className="border-b-1 h-px w-full"></div>
         <div className="p-4 flex w-full items-center justify-between">
           <div className="flex gap-4">
             <div>
@@ -144,32 +145,60 @@ export default function Dashboard() {
           <div className="grid grid-cols-3 gap-4 w-full">
             <div className="col-span-2 grid grid-cols-2 gap-4">
               <Card>
-                <CardHeader>
-                  <Image alt="market" src=""/>
-                  Market Name
+                <CardHeader className="flex gap-2">
+                  <Image alt="market" src={logo} width={25} height={25} className="rounded-md"/>
+                  Will Biden finish his Presidential term?
                 </CardHeader>
-                <CardBody>Here is some more info.</CardBody>
+                <CardBody>
+                  <div className="flex justify-center items-center gap-2">
+                    <div className="flex gap-2">
+                      <Button color="success">Yes</Button>
+                      <Button color="danger">No</Button>
+                    </div>
+                  </div>
+                </CardBody>
               </Card>
               <Card>
-                <CardHeader>
-                  <Image alt="market" src="" />
-                  Market Name
+                <CardHeader className="flex gap-2">
+                  <Image alt="market" src={logo} width={25} height={25} className="rounded-md"/>
+                  Will SpaceX land on Mars before 2030?
                 </CardHeader>
-                <CardBody>Here is some more info.</CardBody>
+                <CardBody>
+                  <div className="flex justify-center items-center gap-2">
+                    <div className="flex gap-2">
+                      <Button color="success">Yes</Button>
+                      <Button color="danger">No</Button>
+                    </div>
+                  </div>
+                </CardBody>
               </Card>
               <Card>
-                <CardHeader>
-                  <Image alt="market" src="" />
-                  Market Name
+                <CardHeader className="flex gap-2">
+                  <Image alt="market" src={logo} width={25} height={25} className="rounded-md"/>
+                  Will the Democrats win the 2024 US Presidential Election?
                 </CardHeader>
-                <CardBody>Here is some more info.</CardBody>
+                <CardBody>
+                  <div className="flex justify-center items-center gap-2">
+                    <div className="flex gap-2">
+                      <Button color="success">Yes</Button>
+                      <Button color="danger">No</Button>
+                    </div>
+                  </div>
+                </CardBody>
               </Card>
               <Card>
-                <CardHeader>
-                  <Image alt="market" src="" />
-                  Market Name
+                <CardHeader className="flex gap-2">
+                  <Image alt="market" src={logo} width={25} height={25} className="rounded-md"/>
+                  Will SpaceX successfully launch Starship by the end of 2025?
                 </CardHeader>
-                <CardBody>Here is some more info.</CardBody>
+                <CardBody>
+                  <div className="flex justify-center items-center gap-2">
+                    <div className="flex gap-2">
+                      <Button color="success">Yes</Button>
+                      <Button color="danger">No</Button>
+                    </div>
+                  </div>
+                </CardBody>
               </Card>
             </div>
             <div>

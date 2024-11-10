@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
 nextConfig.images = {
-  domains: ["encrypted-tbn0.gstatic.com"],
-};
+  remotePatterns: [
+    {
+      protocol: 'https',
+      hostname: '**',
+    },
+  ],
+},
 module.exports = nextConfig;

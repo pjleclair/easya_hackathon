@@ -2,7 +2,7 @@
   {
     "id": "1",
     "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXE4WXy29ldj6Ds63QuzHAV8G3e3OvPf7_A&s",
-    "name": "Will Bitcoin reach by the end of 2023?",
+    "name": "Will Bitcoin reach $100,000 by the end of 2024?",
     "category": "Cryptocurrency",
     "status": "Open",
     "outcomes": [
@@ -10,6 +10,63 @@
         "id": "1",
         "name": "Yes",
         "odds": 0.25
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.75
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "logo": "https://cdn.freebiesupply.com/images/large/2x/kansas-city-chiefs-logo-transparent.png",
+    "name": "Will the Chiefs win the Superbowl?",
+    "category": "Cryptocurrency",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.20
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.80
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "logo": "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+    "name": "Will Ethereum reach $4,500 by the end of 2024?",
+    "category": "Cryptocurrency",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.30
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.70
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "logo": "https://images.mktw.net/im-41684901?width=1260&height=869",
+    "name": "Will Biden finish his Presidential term?",
+    "category": "Cryptocurrency",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.85
       },
       {
         "id": "2",
@@ -19,146 +76,97 @@
     ]
   },
   {
-    "id": "2",
-    "name": "Will the Democrats win the 2024 US Presidential Election?",
-    "category": "Politics",
-    "status": "Open",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.55
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.45
-      }
-    ]
-  },
-  {
-    "id": "3",
-    "name": "Will SpaceX successfully launch Starship by the end of 2023?",
-    "category": "Space",
-    "status": "Closed",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.6
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.4
-      }
-    ]
-  },
-  {
-    "id": "11",
-    "name": "Will Bitcoin reach by the end of 2023?",
+    "id": "5",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png",
+    "name": "Will Man City win the Premier League?",
     "category": "Cryptocurrency",
     "status": "Open",
     "outcomes": [
       {
         "id": "1",
         "name": "Yes",
-        "odds": 0.25
+        "odds": 0.26
       },
       {
         "id": "2",
         "name": "No",
-        "odds": 0.75
+        "odds": 0.74
       }
     ]
   },
   {
-    "id": "12",
-    "name": "Will the Democrats win the 2024 US Presidential Election?",
-    "category": "Politics",
-    "status": "Open",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.55
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.45
-      }
-    ]
-  },
-  {
-    "id": "13",
-    "name": "Will SpaceX successfully launch Starship by the end of 2023?",
-    "category": "Space",
-    "status": "Closed",
-    "outcomes": [
-      {
-        "id": "1",
-        "name": "Yes",
-        "odds": 0.6
-      },
-      {
-        "id": "2",
-        "name": "No",
-        "odds": 0.4
-      }
-    ]
-  },
-  {
-    "id": "21",
-    "name": "Will Bitcoin reach by the end of 2023?",
+    "id": "6",
+    "logo": "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+    "name": "Ethereum all time high in 2024?",
     "category": "Cryptocurrency",
     "status": "Open",
     "outcomes": [
       {
         "id": "1",
         "name": "Yes",
-        "odds": 0.25
+        "odds": 0.18
       },
       {
         "id": "2",
         "name": "No",
-        "odds": 0.75
+        "odds": 0.82
       }
     ]
   },
   {
-    "id": "22",
-    "name": "Will the Democrats win the 2024 US Presidential Election?",
-    "category": "Politics",
+    "id": "7",
+    "logo": "https://www.honorathletics.ca/wp-content/uploads/2024/03/jake-paul-vs-mike-tyson--scaled.jpg",
+    "name": "Will Mike Tyson beat Jake Paul?",
+    "category": "Cryptocurrency",
     "status": "Open",
     "outcomes": [
       {
         "id": "1",
         "name": "Yes",
-        "odds": 0.55
+        "odds": 0.39
       },
       {
         "id": "2",
         "name": "No",
-        "odds": 0.45
+        "odds": 0.61
       }
     ]
   },
   {
-    "id": "23",
-    "name": "Will SpaceX successfully launch Starship by the end of 2023?",
-    "category": "Space",
-    "status": "Closed",
+    "id": "8",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png",
+    "name": "Will Solana hit an ATH in 2024?",
+    "category": "Cryptocurrency",
+    "status": "Open",
     "outcomes": [
       {
         "id": "1",
         "name": "Yes",
-        "odds": 0.6
+        "odds": 0.44
       },
       {
         "id": "2",
         "name": "No",
-        "odds": 0.4
+        "odds": 0.56
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Inter_Miami_CF_logo.svg/800px-Inter_Miami_CF_logo.svg.png",
+    "name": "Will Inter Miami win the MLS Cup?",
+    "category": "Cryptocurrency",
+    "status": "Open",
+    "outcomes": [
+      {
+        "id": "1",
+        "name": "Yes",
+        "odds": 0.43
+      },
+      {
+        "id": "2",
+        "name": "No",
+        "odds": 0.57
       }
     ]
   },
