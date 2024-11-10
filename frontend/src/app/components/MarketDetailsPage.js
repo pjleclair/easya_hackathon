@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MarketChart from "./MarketChart";
 import Outcomes from "./Outcomes";
 import BuyPosition from "./BuyPosition";
+import toast from "react-hot-toast";
+import { buyOption } from "../utils/contractCall";
+import { UserContext } from "../UserContext";
 
 const MarketDetailsPage = ({ market }) => {
   const [selectedOutcome, setSelectedOutcome] = useState(market.outcomes[0]);
   const [selectedPosition, setSelectedPosition] = useState(true);
   const [amount, setAmount] = useState(0);
+  const { userData } = useContext(UserContext);
 
-  const onBuyPosition = () => {
+  const onBuyPosition = async () => {
     if (!selectedOutcome || !selectedPosition || amount <= 0) {
-      alert("Please select an outcome and position and enter a valid amount");
+      toast.error("Please select an outcome and position and enter a valid amount");
       return;
     }
     // Call the buy position API
-    alert("Position bought successfully");
-    setSelectedOutcome(null);
-    setSelectedPosition(null);
+    await buyOption(userData, selectedOutcome.id, amount);
+    toast.success("Position bought successfully");
     setAmount(0);
   };
 

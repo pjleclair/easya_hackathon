@@ -144,6 +144,34 @@ const getOption = async (userData, optionID, getMarket, updateMarket) => {
   updateMarket(market);
 };
 
+const fetchBtcRate = async (userData, optionID, getMarket, updateMarket) => {
+  if (!userData || !userData.profile.stxAddress.testnet) {
+    alert("Please connect your wallet to create a market.");
+    return;
+  }
+
+  const functionName = "fetch-price-btc";
+  const network = new StacksTestnet();
+  const senderAddress = userData.profile.stxAddress.testnet;
+
+  const functionArgs = [optionID];
+  const options = {
+    contractAddress,
+    contractName,
+    functionName,
+    functionArgs,
+    network,
+    senderAddress,
+    onFinish: (data) => {
+      console.log(data);
+    },
+  };
+
+  const result = await callReadOnlyFunction(options);
+
+  console.log(result);
+};
+
 const buyOption = async (userData, optionID, amount) => {
   if (!userData || !userData.profile.stxAddress.testnet) {
     alert("Please connect your wallet to create a market.");
@@ -169,14 +197,6 @@ const buyOption = async (userData, optionID, amount) => {
   };
 
   await openContractCall(options)
-    .then((data) => {
-      alert("Success");
-      console.log(data);
-    })
-    .catch((error) => {
-      alert("Error");
-      console.log(error);
-    });
 };
 const sellOption = async (userData, optionID, amount) => {
   if (!userData || !userData.profile.stxAddress.testnet) {
@@ -203,14 +223,32 @@ const sellOption = async (userData, optionID, amount) => {
   };
 
   await openContractCall(options)
-    .then((data) => {
-      alert("Success");
+};
+const stake = async (userData, amount) => {
+  if (!userData || !userData.profile.stxAddress.testnet) {
+    alert("Please connect your wallet to create a market.");
+    return;
+  }
+
+  const functionName = "stake";
+  const network = new StacksTestnet();
+  const senderAddress = userData.profile.stxAddress.testnet;
+
+  const functionArgs = [uintCV(amount)];
+
+  const options = {
+    contractAddress,
+    contractName,
+    functionName,
+    functionArgs,
+    network,
+    senderAddress,
+    onFinish: (data) => {
       console.log(data);
-    })
-    .catch((error) => {
-      alert("Error");
-      console.log(error);
-    });
+    },
+  };
+
+  await openContractCall(options)
 };
 
-export { createMarket, getAllOptions, getOption, buyOption, sellOption };
+export { createMarket, getAllOptions, getOption, buyOption, sellOption, stake };

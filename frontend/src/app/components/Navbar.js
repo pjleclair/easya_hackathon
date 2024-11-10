@@ -15,8 +15,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex flex-col gap-4 p-4 text-black w-fit h-screen shadow-md">
-      <div className="flex">
+    <nav className="flex flex-col m-4 rounded-lg bg-white gap-4 p-4 text-black w-1/5 h-screen shadow-md">
+      <div className="flex p-4 justify-center items-center">
         <Image src={logo} alt="logo" priority="true" />
       </div>
       <spacer className="h-10"></spacer>
