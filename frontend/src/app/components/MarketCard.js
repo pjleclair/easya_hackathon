@@ -26,7 +26,7 @@ const MarketCard = ({ market, selectMarket }) => {
 
     const action =
       (selectedOutcome.id == 1 && selectedPosition) ||
-      (selectedOutcome.id == 2 && selectedPosition)
+      (selectedOutcome.id == 2 && !selectedPosition)
         ? buyOption
         : sellOption;
     await action(userData, selectedOutcome.id, amount);
