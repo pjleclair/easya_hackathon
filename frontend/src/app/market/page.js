@@ -22,7 +22,7 @@ export default function Market() {
         <MarketDetailsPage market={selectedMarket} />
       ) : (
         <div className="flex-col pb-5">
-          <h1 className="mt-8 text-4xl font-semibold text-black text-center">
+          <h1 className="mt-8 text-4xl font-semibold text-black text-center drop-shadow-lg">
             BitBet
           </h1>
           <h4 className="mt-4 font-semibold text-black text-center">

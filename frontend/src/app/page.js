@@ -127,7 +127,7 @@ export default function Dashboard() {
   return (
     <div className="flex w-full">
       <div className="flex flex-col w-full pr-4 pl-4 items-center">
-        <h1 className="text-4xl p-4 font-semibold">
+        <h1 className="text-4xl p-4 font-semibold drop-shadow-lg">
           Portfolio
         </h1>
         <div className="p-4 flex w-full items-center justify-between">
@@ -153,7 +153,7 @@ export default function Dashboard() {
           <div className="rounded-lg w-3/5 h-1/2 flex justify-center items-center flex-col mb-20 mt-8 bg-slate-50 p-4">
             <Line options={options} data={data}/>
           </div>
-          <h1 className="mb-2 text-xl">Markets</h1>
+          <h1 className="mb-2 text-xl drop-shadow-lg">Markets</h1>
           <div className="grid grid-cols-3 gap-4 w-full">
             <div className="col-span-2 grid grid-cols-2 gap-4">
               <Card>
@@ -175,6 +175,7 @@ export default function Dashboard() {
                   <Image alt="market" src={chiefsLogo} width={25} height={25} className="rounded-md"/>
                   Will the Chiefs win the Superbowl?
                 </CardHeader>
+                <br />
                 <CardBody>
                   <div className="flex justify-center items-center gap-2">
                     <div className="flex gap-2">
@@ -203,6 +204,7 @@ export default function Dashboard() {
                   <Image alt="market" src={bidenLogo} width={25} height={25} className="rounded-md"/>
                   Will Biden finish his Presidential term?
                 </CardHeader>
+                <br />
                 <CardBody>
                   <div className="flex justify-center items-center gap-2">
                     <div className="flex gap-2">
@@ -220,40 +222,40 @@ export default function Dashboard() {
                 </CardHeader>
                 <CardBody>
                   <div className="flex h-8 justify-center gap-4">
-                    <Image src={Chiefs} alt="chiefs logo" width={20} height={20}/>
+                    <Image src={Chiefs} alt="chiefs logo" width={35} height={35}/>
                     <div className="flex flex-col">
                       <div className="text-xs font-semibold">Will the Chiefs win the Superbowl?</div>
-                      <small className="flex gap-2">Phil bought <span className="text-green-600"> Yes </span> at 19.5¢ ($39.20)</small>
+                      <small className="flex gap-1">Phil bought <span className="text-green-600">Yes</span> at 19.5¢ ($39.20)</small>
                     </div>
                   </div>
                 </CardBody>
                 <Divider />
                 <CardBody>
                   <div className="flex h-8 justify-center gap-4">
-                    <Image src={BtcLogo} alt="btc logo" width={15} height={15}/>
+                    <Image src={BtcLogo} alt="btc logo" width={25} height={25}/>
                     <div className="flex flex-col">
                       <div className="text-xs font-semibold">Will BTC be {'>'} 75k on Nov. 30th?</div>
-                      <small className="flex gap-2">Hayley sold <span className="text-red-600"> No </span> at 40.2¢ ($254.87)</small>
+                      <small className="flex gap-1">Hayley sold <span className="text-red-600">No</span> at 40.2¢ ($254.87)</small>
                     </div>
                   </div>
                 </CardBody>
                 <Divider />
                 <CardBody>
                   <div className="flex h-8 justify-center gap-4">
-                    <Image src={Steelers} alt="btc logo" width={15} height={15}/>
+                    <Image src={Steelers} alt="btc logo" width={25} height={25}/>
                     <div className="flex flex-col">
                       <div className="text-xs font-semibold">Will the Steelers win the Superbowl?</div>
-                      <small className="flex gap-2">Dom bought <span className="text-red-600"> No </span> at 97.7¢ ($488.50)</small>
+                      <small className="flex gap-1">Dom bought <span className="text-red-600">No</span> at 97.7¢ ($488.50)</small>
                     </div>
                   </div>
                 </CardBody>
                 <Divider />
                 <CardBody>
                   <div className="flex h-8 justify-center gap-4">
-                    <Image src={Steelers} alt="btc logo" width={15} height={15}/>
+                    <Image src={Steelers} alt="btc logo" width={25} height={25}/>
                     <div className="flex flex-col">
                       <div className="text-xs font-semibold">Will BTC be {'>'} 75k on Nov. 30th?</div>
-                      <small className="flex gap-2">Alex bought <span className="text-green-600"> Yes </span> at 59.8¢ ($41.86)</small>
+                      <small className="flex gap-1">Alex bought <span className="text-green-600">Yes</span> at 59.8¢ ($41.86)</small>
                     </div>
                   </div>
                 </CardBody>
