@@ -28,7 +28,7 @@ const Outcomes = ({
                   ? "from-green-400 to-blue-500"
                   : "from-green-200 to-blue-300"
               }`}>
-              Yes
+              Buy
             </button>
             <button
               onClick={() => handleSelect(outcome, false)}
@@ -40,7 +40,7 @@ const Outcomes = ({
                   ? "from-red-400 to-pink-500"
                   : "from-red-300 to-pink-200"
               }`}>
-              No
+              Sell
             </button>
           </div>
         </div>
