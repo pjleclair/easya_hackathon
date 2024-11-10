@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import MarketCard from "../components/MarketCard";
 import { useMarket } from "../MarketContext";
 import MarketDetailsPage from "../components/MarketDetailsPage";
-import { createMarket, getOption } from "../utils/contractCall";
+import { createMarket, getAllOptions } from "../utils/contractCall";
 import { UserContext } from "../UserContext";
 
 export default function Market() {
@@ -15,7 +15,7 @@ export default function Market() {
 
   useEffect(() => {
     if (userData != {} && userData.profile)
-      getOption(userData, getMarket, updateMarket);
+      getAllOptions(userData, getMarket, updateMarket);
   }, [userData]);
 
   return (
@@ -28,11 +28,6 @@ export default function Market() {
             onClick={() => createMarket(userData)}
             className="mt-4 ml-4 text-white bg-gray-800 rounded px-4 py-2">
             Create Market
-          </button>
-          <button
-            onClick={() => getOption(userData, getMarket, updateMarket)}
-            className="mt-4 ml-4 text-white bg-gray-800 rounded px-4 py-2">
-            Get Market
           </button>
           <h1 className="mt-8 text-4xl font-semibold text-black text-center drop-shadow-lg">
             BitBet
