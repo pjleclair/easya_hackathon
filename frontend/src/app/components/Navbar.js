@@ -10,12 +10,8 @@ import { useState } from "react";
 export default function Navbar() {
   const [nav, setNav] = useState("portfolio");
 
-  const handleMenuSelect = (e) => {
-    console.log(e.target.value);
-  };
-
   return (
-    <nav className="flex flex-col m-4 rounded-lg bg-white gap-4 p-4 text-black w-1/5 h-screen shadow-md">
+    <nav className="flex flex-col rounded-lg gap-4 p-4 text-black w-1/5 h-screen shadow-md">
       <div className="flex p-4 justify-center items-center">
         <Image src={logo} alt="logo" priority="true" />
       </div>
@@ -24,8 +20,8 @@ export default function Navbar() {
         <li>
           <Link
             href="/"
-            className="hover:text-orange-500"
-            onClick={handleMenuSelect}>
+            className={`hover:text-orange-500 ${nav==="portfolio" && 'text-orange-500'}`}
+            onClick={() => setNav("portfolio")}>
             Portfolio
           </Link>
         </li>
@@ -33,8 +29,8 @@ export default function Navbar() {
         <li>
           <Link
             href="/market"
-            className="hover:text-orange-500"
-            onClick={handleMenuSelect}>
+            className={`hover:text-orange-500 ${nav==="market" && 'text-orange-500'}`}
+            onClick={() => setNav("market")}>
             Markets
           </Link>
         </li>
@@ -42,8 +38,8 @@ export default function Navbar() {
         <li>
           <Link
             href="/busd"
-            className="hover:text-orange-500"
-            onClick={handleMenuSelect}>
+            className={`hover:text-orange-500 ${nav==="busd" && 'text-orange-500'}`}
+            onClick={() => setNav("busd")}>
             bUSD
           </Link>
         </li>
