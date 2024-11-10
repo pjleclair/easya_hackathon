@@ -36,6 +36,12 @@ export default function Dashboard() {
 
   const logo = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXE4WXy29ldj6Ds63QuzHAV8G3e3OvPf7_A&s";
 
+  const chiefsLogo = "https://cdn.freebiesupply.com/images/large/2x/kansas-city-chiefs-logo-transparent.png";
+
+  const ethLogo = "https://cryptologos.cc/logos/ethereum-eth-logo.png";
+
+  const bidenLogo = "https://images.mktw.net/im-41684901?width=1260&height=869";
+
   const options = {
     responsive: true,
     plugins: {
@@ -147,49 +153,49 @@ export default function Dashboard() {
               <Card>
                 <CardHeader className="flex gap-2">
                   <Image alt="market" src={logo} width={25} height={25} className="rounded-md"/>
+                  Will Bitcoin reach $100,000 by the end of 2024?
+                </CardHeader>
+                <CardBody>
+                  <div className="flex justify-center items-center gap-2">
+                    <div className="flex gap-2">
+                      <Button color="success">Yes</Button>
+                      <Button color="danger">No</Button>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              <Card>
+                <CardHeader className="flex gap-2">
+                  <Image alt="market" src={chiefsLogo} width={25} height={25} className="rounded-md"/>
+                  Will the Chiefs win the Superbowl?
+                </CardHeader>
+                <CardBody>
+                  <div className="flex justify-center items-center gap-2">
+                    <div className="flex gap-2">
+                      <Button color="success">Yes</Button>
+                      <Button color="danger">No</Button>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              <Card>
+                <CardHeader className="flex gap-2">
+                  <Image alt="market" src={ethLogo} width={25} height={25} className="rounded-md"/>
+                  Will Ethereum reach $4,500 by the end of 2024?
+                </CardHeader>
+                <CardBody>
+                  <div className="flex justify-center items-center gap-2">
+                    <div className="flex gap-2">
+                      <Button color="success">Yes</Button>
+                      <Button color="danger">No</Button>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+              <Card>
+                <CardHeader className="flex gap-2">
+                  <Image alt="market" src={bidenLogo} width={25} height={25} className="rounded-md"/>
                   Will Biden finish his Presidential term?
-                </CardHeader>
-                <CardBody>
-                  <div className="flex justify-center items-center gap-2">
-                    <div className="flex gap-2">
-                      <Button color="success">Yes</Button>
-                      <Button color="danger">No</Button>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-              <Card>
-                <CardHeader className="flex gap-2">
-                  <Image alt="market" src={logo} width={25} height={25} className="rounded-md"/>
-                  Will SpaceX land on Mars before 2030?
-                </CardHeader>
-                <CardBody>
-                  <div className="flex justify-center items-center gap-2">
-                    <div className="flex gap-2">
-                      <Button color="success">Yes</Button>
-                      <Button color="danger">No</Button>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-              <Card>
-                <CardHeader className="flex gap-2">
-                  <Image alt="market" src={logo} width={25} height={25} className="rounded-md"/>
-                  Will the Democrats win the 2024 US Presidential Election?
-                </CardHeader>
-                <CardBody>
-                  <div className="flex justify-center items-center gap-2">
-                    <div className="flex gap-2">
-                      <Button color="success">Yes</Button>
-                      <Button color="danger">No</Button>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-              <Card>
-                <CardHeader className="flex gap-2">
-                  <Image alt="market" src={logo} width={25} height={25} className="rounded-md"/>
-                  Will SpaceX successfully launch Starship by the end of 2025?
                 </CardHeader>
                 <CardBody>
                   <div className="flex justify-center items-center gap-2">

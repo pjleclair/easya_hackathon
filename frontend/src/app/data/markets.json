@@ -20,20 +20,20 @@
   },
   {
     "id": "2",
-    "logo": "https://cdn.freebiesupply.com/images/large/2x/kansas-city-chiefs-logo-transparent.png",
-    "name": "Will the Chiefs win the Superbowl?",
+    "logo": "https://pbs.twimg.com/profile_images/1752277246734176256/BaHRlLzJ_400x400.jpg",
+    "name": "Will Dom miss a gym day in 2025?",
     "category": "Cryptocurrency",
     "status": "Open",
     "outcomes": [
       {
         "id": "1",
         "name": "Yes",
-        "odds": 0.2
+        "odds": 0.01
       },
       {
         "id": "2",
         "name": "No",
-        "odds": 0.8
+        "odds": 0.99
       }
     ]
   },
